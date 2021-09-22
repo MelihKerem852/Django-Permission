@@ -1,0 +1,20 @@
+{% extends 'index.html' %}
+{% block body %}
+<h1>{{ appeal.name }}{{ appeal.last_name }} Hakkında: </h1>
+<br>
+<hr>
+<br>    
+<p>{{ appeal.email }}</p>
+<p>{{ appeal.age }}</p>
+<p>{{ appeal.education }}</p>
+<p>{{ appeal.status }}</p>
+<p>{{ appeal.department }}</p>
+<p>{{ appeal.about }}</p>
+<p>{{ appeal.appeal_date }}</p>
+
+{% if appeal.cv %}
+<p>asdklşnsdfjlksddljkf</p>
+<a href="{{ appeal.cv.url }}" download>CV İncele</a>
+{% endif %}
+
+{% endblock body %}

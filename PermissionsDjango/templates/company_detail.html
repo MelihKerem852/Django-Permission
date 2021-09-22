@@ -1,0 +1,12 @@
+{% extends 'index.html' %}
+{% block body %}
+<h1>{{ company.title }}' Şirketi Hakkında: </h1>
+<p class="lead">{{ company.location }}</p>
+{% if company.image %}<img src="{{ company.image.url }}" alt="" style="width:40%; margin-left:30%">{% endif %}
+<br>
+<hr>
+<br>    
+<p>{{ company.content }}</p>
+
+<a href="#" class="btn btn-danger" style= "width:10%; margin-left:40%; margin-right:auto;">Başvur!</a>
+{% endblock body %}

@@ -1,0 +1,22 @@
+{% extends 'index.html' %}
+{% block body %}
+    
+    {% load crispy_forms_tags %}
+<div class="container">  
+    <div class="row">
+    <div class="col-md-6 offset-md-3">
+        <h3>Kart Oluştur</h3>
+        <hr>
+        <br>
+        <form method = "post" enctype="multipart/form-data">
+            {% csrf_token %}
+            {{ form.media }}
+            {{ form|crispy}}
+            <br>
+            <button type = "submit" class = "btn btn-danger">Kart Ekle</button>
+        </form>
+        </div>
+    </div>
+</div>  
+{% endblock body %}
+

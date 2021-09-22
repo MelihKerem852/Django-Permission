@@ -1,0 +1,9 @@
+{% extends 'index.html' %}
+{% block body %}
+<a href="{% url 'company_list' %}">Turn Back</a>
+<form method= "POST">
+    {% csrf_token %}
+    <p>Are You Sure About Delete This Appeal</p>
+    <input type="submit" value="Delete">
+</form>
+{% endblock  %}
